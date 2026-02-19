@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 450
+  },
+  {
+    "id": 2,
+    "title": "ABC",
+    "author": "a",
+    "price": 250
+  },
+  {
+    "id": 3,
+    "title": "Effective Java",
+    "author": "Joshua Bloch",
+    "price": 520
+  },
+  {
+    "id": 4,
+    "title": "Data Structures",
+    "author": "Mark Allen",
+    "price": 390
+  },
+  {
+    "id": 5,
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "price": 650
+  },
+  {
+    "id": 6,
+    "title": "JavaScript Basics",
+    "author": "John Doe",
+    "price": 300
+  },
+  {
+    "id": 7,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "price": 850
+  },
+  {
+    "id": 8,
+    "title": "Web Development",
+    "author": "Jane Smith",
+    "price": 420
+  },
+  {
+    "id": 9,
+    "title": "Software Engineering",
+    "author": "Ian Sommerville",
+    "price": 780
+  },
+  {
+    "id": 10,
+    "title": "Database Systems",
+    "author": "Raghu Ramakrishnan",
+    "price": 560
+  }
+]
