@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Home</title>
+    <!-- Simple styling for better look -->
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .search-box { margin: 2rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 4px; }
+        .btn { display: inline-block; padding: 0.5rem 1rem; background: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Bookstore</h1>
+    
+    <div class="search-box">
+        <h3>Search Books</h3>
+        <form action="/books/search" method="GET">
+            <input type="text" name="name" placeholder="Enter book name..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div>
+        <a href="/books" class="btn">View All Books</a>
+    </div>
+</body>
+</html>

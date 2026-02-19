@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 0.5rem; text-align: left; border-bottom: 1px solid #ddd; }
+        .add-form { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 4px; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; }
+        input { width: 100%; padding: 0.5rem; box-sizing: border-box; }
+        .nav { margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Back to Home</a>
+    </div>
+
+    <h1>Book List</h1>
+
+    <% if (typeof searchQuery !== 'undefined') { %>
+        <p>Showing results for: <strong><%= searchQuery %></strong> <a href="/books">(Clear)</a></p>
+    <% } %>
+
+    <% if (books.length === 0) { %>
+        <p>No books found.</p>
+    <% } else { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% books.forEach(book => { %>
+                    <tr>
+                        <td><%= book.id %></td>
+                        <td><%= book.title %></td>
+                        <td><%= book.author %></td>
+                        <td>$<%= book.price.toFixed(2) %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } %>
+
+    <div class="add-form">
+        <h3>Add a New Book</h3>
+        <form action="/books" method="POST">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+</body>
+</html>
